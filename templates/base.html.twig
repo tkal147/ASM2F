@@ -8,7 +8,7 @@
 			{% endblock %}
 		</title>
 		{# Run composer require symfony/webpack-encore-bundle
-		           and uncomment the following Encore helpers to start using Symfony UX #}
+						           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			<!-- CSS only -->
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
@@ -20,8 +20,14 @@
 		{% endblock %}
 	</head>
 	<body>
-	   {# tạo 1 section để hiển thị thông báo Flash gửi từ back-end (Controller) #}
+		<header>
+			<div class="container" style="display:flex; justify-content:center;">
+				<img src="https://ap.greenwich.edu.vn/FGW_logo_d.jpg" alt="" style="height:10vh">
+			</div>
+		</header>
+		{# tạo 1 section để hiển thị thông báo Flash gửi từ back-end (Controller) #}
 		<div class="container col-md-6 mt-3">
+
 			{% for message in app.flashes('Error') %}
 				<p class="alert alert-danger">{{ message }}</p>
 			{% endfor %}
