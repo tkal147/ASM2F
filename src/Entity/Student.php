@@ -71,12 +71,12 @@ class Student
         return $this;
     }
 
-    public function getAvatar(): ?string
+    public function getAvatar()
     {
         return $this->avatar;
     }
 
-    public function setAvatar(string $avatar): self
+    public function setAvatar(string $avatar)
     {
         $this->avatar = $avatar;
 
