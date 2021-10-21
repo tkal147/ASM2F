@@ -82,7 +82,7 @@ class ClassesController extends AbstractController
             return $this->redirectToRoute("classes_index");
         }
         return $this->render(
-            '/classes/add.html.twig',
+            '/classes/edit.html.twig',
             [
                 "form" => $form->createView()
             ]

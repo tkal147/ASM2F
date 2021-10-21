@@ -85,7 +85,7 @@ class CourseController extends AbstractController
             return $this->redirectToRoute("course_index");
         }
         return $this->render(
-            '/course/add.html.twig',
+            '/course/edit.html.twig',
             [
                 "form" => $form->createView()
             ]
