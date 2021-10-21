@@ -8,7 +8,7 @@
 			{% endblock %}
 		</title>
 		{# Run composer require symfony/webpack-encore-bundle
-						           and uncomment the following Encore helpers to start using Symfony UX #}
+								           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			<!-- CSS only -->
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
@@ -25,6 +25,24 @@
 				<img src="https://ap.greenwich.edu.vn/FGW_logo_d.jpg" alt="" style="height:10vh">
 			</div>
 		</header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<h2>FPT</h2>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#">Students</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Courses</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Classes</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 		{# tạo 1 section để hiển thị thông báo Flash gửi từ back-end (Controller) #}
 		<div class="container col-md-6 mt-3">
 
