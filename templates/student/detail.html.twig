@@ -29,15 +29,15 @@
             </td>
              <td>
                   {% for b in student.course %}
-                     <a href="{{ path('book_detail', {'id': b.id }) }}">
+                     <a href="{{ path('classes_detail', {'id': b.id }) }}">
                         {{ b.name }}
                      </a>
                      <br>
                   {% endfor %}
             </td>
             <td>
-                  {% for m in student.class %}
-                     <a href="{{ path('magazine_detail', {'id': m.id }) }}">
+                  {% for m in student.classes %}
+                     <a href="{{ path('course_detail', {'id': m.id }) }}">
                         {{ m.name }}
                      </a>
                      <br>

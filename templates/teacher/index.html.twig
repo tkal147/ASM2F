@@ -1,20 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TeacherController!{% endblock %}
+{% block title %}Hello TeacherController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<div class="container">
+		<h4>Class</h4>
+		<a class="btn btn-outline-primary" href="{{ path('teacher_add') }}">ADD teacher</a>
+		<table class="table table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Name</th>
+					<th scope="col">Age</th>
+					<th scope="col">Location</th>
+					<th scope="col">Manage</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for c in teacher %}
+					<tr>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/GCH0803/ASM2F/src/Controller/TeacherController.php'|file_link(0) }}">src/Controller/TeacherController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/GCH0803/ASM2F/templates/teacher/index.html.twig'|file_link(0) }}">templates/teacher/index.html.twig</a></code></li>
-    </ul>
-</div>
+						<td>{{c.id}}</td>
+						<td>{{c.name}}</td>
+						<td>{{c.age}}</td>
+                        <td>{{c.Location}}</td>
+						<td>
+							<a href="{{path('teacher_detail',{'id': c.id})}}" class="btn btn-success">detail</a>
+							<a href="{{path('teacher_edit',{'id': c.id})}}" class="btn btn-success">Edit</a>
+							<a href="{{path('teacher_delete',{'id': c.id})}}" class="btn btn-success">Delete</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
 {% endblock %}
